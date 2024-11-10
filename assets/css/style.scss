@@ -1,0 +1,25 @@
+@charset "utf-8";
+@import './common/config';
+@import './common/reset';
+@import './common/media';
+@import './common/l-common';
+@import './layout/c-header';
+@import './layout/c-footer';
+@import './contact/contact';    
+@import './news/news';
+@import './detail/detail';
+@import './about/about';
+
+//base
+@import "base/config.scss";
+@import "base/common.scss";
+@import "base/typo.scss";
+@import "base/animation.scss";
+@import "base/loading.scss";
+
+//core
+@import "core/header.scss";
+@import "core/footer.scss";
+
+//pages
+@import "pages/index.scss";

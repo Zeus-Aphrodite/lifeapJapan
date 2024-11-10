@@ -1,0 +1,480 @@
+.contact {
+  position: relative;
+  overflow: hidden;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include sp {
+      display: block;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      background: #fff;
+      z-index: 2;
+      transition: all 1s ease-in-out;
+    }
+    &._show {
+      transform: unset !important;
+      visibility: visible;
+      filter: unset !important;
+      opacity: 1;
+      &::after {
+        width: 0%;
+      } 
+    }
+  }
+  &-txt {
+    position: relative;
+    z-index: 5;
+    p {
+      color: var(--g-color-black);
+      font-family: "Inter", sans-serif;
+      font-weight: bold;
+      font-size: 30px;
+      @include pc {
+        font-size: 30rem;
+      }
+      @include sp {
+        font-size: 20rem;
+      }
+      &:first-child {
+        font-size: 24px;
+        @include pc {
+          font-size: 24rem;
+        }
+        @include sp {
+          font-size: 16rem;
+        }
+      }
+      span {
+        color: var(--g-color-white);
+        font-size: 64px;
+        font-weight: 200;
+        @include pc {
+          font-size: 64rem;
+        }
+        @include sp {
+          font-size: 32rem;
+        }
+      }
+    }
+  }
+
+  &-btn {
+    position: relative;
+    z-index: 5;
+    a {
+    right: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      position: relative;
+      width: 337px;
+      height: 91px;
+      padding-left: 67px;
+      background: #1E1E1E;
+      @include pc {
+        width: 337rem;
+        height: 91rem;
+        padding-left: 67rem;
+      }
+      @include sp {
+        margin-top: 50rem;
+        width: 200rem;
+        height: 60rem;
+        padding-left: 40rem;
+      }
+      @include media-sp{
+        left: 100px;
+      }
+      span {
+        color: #fff;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 1;
+        position: relative;
+        z-index: 5;
+        transition: all 0.6s ease-in-out;
+        display: block;
+        width: 100%;
+        @include pc {
+          font-size: 40rem;
+        }
+        @include sp {
+          font-size: 20rem;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 33px;
+          height: 42px;
+          width: 42px;
+          border-radius: 50%;
+          border: 1px solid #fff;
+          transition: all 0.3s ease-in-out;
+          @include pc {
+            right: 33rem;
+            height: 42rem;
+            width: 42rem;
+          }
+          @include sp {
+            right: 20rem;
+            height: 34rem;
+            width: 34rem;
+          }
+        }
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        height: 84%;
+        width: 0;
+        background: #fff;
+        transition: all 0.6s ease-in-out;
+        transition-timing-function: cubic-bezier(1.000, -0.195, 0.000, 1.330);
+      }
+      svg {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 50px;
+        height: 12px;
+        width: 42px;
+        transition: all 0.3s ease-in-out;
+        @include pc {
+          right: 50rem;
+          height: 12rem;
+          width: 42rem;
+        }
+        @include sp {
+          right: 35rem;
+          height: 8rem;
+          width: 32rem;
+        }
+        line {
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      &:hover {
+        span {
+          color: var(--g-color-black);
+          &::after {
+            border: 1px solid #000;
+          }
+        }
+        &::before {
+          width: 94%;
+        }
+        svg {
+          right: 40px;
+          @include pc {
+            right: 40rem;
+          }
+          @include sp {
+            right: 20rem;
+          }
+          line {
+            stroke: #000;
+          }
+        }
+      }
+    }
+  }
+
+  &-logo {
+    position: absolute;
+    bottom: 14px;
+    right: 21px;
+    z-index: 8;
+    @include pc {
+      bottom: 14rem;
+      right: 21rem;
+    }
+    @include sp {
+      bottom: 7rem;
+      right: 10rem;
+    }
+    img {
+      width: 219px;
+      @include pc {
+        width: 219rem;
+      }
+      @include sp {
+        width: 120rem;
+      }
+    }
+  }
+
+  &-orange-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 75%;
+    background: linear-gradient(45deg, #FDC05E 25%, #F76934 75%);
+    z-index: 1;
+  }
+
+  &-white-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 25%;
+    background: #fff;
+    z-index: 2;
+    span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      background: #fff;
+      &::after {
+        content: '';
+        position: absolute;
+        height: 0;
+        width: 0;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        border-top: 500px solid transparent;
+        border-left: 350px solid transparent;
+        border-right: 350px solid #fff;
+        @include pc {
+          border-top: 800rem solid transparent;
+          border-left: 350rem solid transparent;
+          border-right: 350rem solid #fff;
+        }
+      }
+    }
+  }
+
+  .contact-loop-wrap {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    padding: 30px 0;
+    @include pc {
+      padding: 30rem 0;
+    }
+  }
+  .contact-loop-area {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    animation: loop-area 50s infinite linear;
+    &:not(:last-child) {
+      margin-right: 20px;
+      @include pc {
+        margin-right: 20rem;
+      }
+      @include sp {
+        margin-right: 12rem;
+      }
+    }
+  }
+  @keyframes loop-area {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .contact-loop-txt {
+    font-size: 100px;
+    font-weight: bold;
+    color: #FFD9CB;
+    text-wrap: nowrap;
+    line-height: 1;
+    opacity: 0.4;
+    @include pc {
+      font-size: 180rem;
+    }
+    @include sp {
+      font-size: 72rem;
+    }
+    &:not(:last-child) {
+      margin-right: 20px;
+      @include pc {
+        margin-right: 20rem;
+      }
+      @include sp {
+        margin-right: 12rem;
+      }
+    }
+  }
+}
+
+.footer-main {
+  padding: 72px 0 61px;
+  background: #333;
+  position: relative;
+  overflow: hidden;
+  @include pc {
+    padding: 72rem 0 61rem;
+  }
+  .footer-ttl {
+    p {
+      color: #fafafa;
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 36px;
+      letter-spacing: 0.04em;
+      @include pc {
+        font-size: 20rem;
+        margin-bottom: 36rem;
+      }
+    }
+  }
+  .footer-link {
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 22px;
+    @include pc {
+      padding-bottom: 22rem;
+      border-bottom: 2rem solid #fff;
+    }
+    @include sp {
+      display: block;
+    }
+    & > ul {
+      &:first-child {
+        margin-right: 118px;
+        @include pc {
+          margin-right: 118rem;
+        }
+      }
+      & > li {
+        margin-bottom: 16px;
+        color: #fafafa;
+        font-size: 16px;
+        letter-spacing: 0.04em;
+        font-weight: bold;
+        @include pc {
+          margin-bottom: 16rem;
+          font-size: 16rem;
+        }
+        & > a {
+          position: relative;
+          color: #fafafa;
+          &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            transition: all 0.3s ease-in-out;
+            background: var(--g-color-white);
+            bottom: 0;
+            right: 0;
+            left: auto;
+            height: 1px;
+          }
+          &:hover {
+            &::after {
+              width: 100%;
+              left: 0;
+              right: auto;
+            }
+          }
+        }
+        ul {
+          li {
+            padding-left: 30px;
+            margin-top: 16px;
+            position: relative;
+            @include pc {
+              padding-left: 30rem;
+              margin-top: 16rem;
+            }
+            &::after {
+              content: '';
+              position: absolute;
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              background: var(--g-color-white);
+              top: 50%;
+              left: 15px;
+              transform: translateY(-50%);
+              @include pc {
+                width: 5rem;
+                height: 5rem;
+                left: 15rem;
+              }
+            }
+            a {
+              position: relative;
+              color: #fafafa;
+              &::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                transition: all 0.3s ease-in-out;
+                background: var(--g-color-white);
+                bottom: 0;
+                right: 0;
+                left: auto;
+                height: 1px;
+              }
+              &:hover {
+                &::after {
+                  width: 100%;
+                  left: 0;
+                  right: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-copyright {
+    p {
+      font-size: 16px;
+      color: var(--g-color-white);
+      text-align: center;
+      letter-spacing: 0.04em;
+      font-weight: 400;
+      margin-top: 19px;
+      @include pc {
+        font-size: 16rem;
+        margin-top: 19rem;
+      }
+      @include sp {
+        font-size: 12rem;
+        margin-top: 19rem;
+      }
+    }
+  }
+  .footer-deco {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    img {
+      width: 500px;
+      @include pc {
+        width: 500rem;
+      }
+      @include sp {
+        width: 300rem;
+      }
+    }
+  }
+}

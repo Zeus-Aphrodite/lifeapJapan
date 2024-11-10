@@ -1,0 +1,123 @@
+.c-footer {
+    position: relative;
+
+    .p-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(../img/footer/bg-footer.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+
+        @include media-sp {
+            background-size: cover;
+        }
+
+        .__container {
+            padding: 72px 32px 0;
+
+            @include media-sp {
+                padding: 32px;
+
+            }
+
+            .__link-wraps {
+
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                margin-bottom: 48px;
+                gap: 117px;
+
+                @include media-sp {
+                    margin-bottom: 24px;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    gap: 0px;
+                    .end_link{
+                        display: none;
+                    }
+                    
+
+                }
+
+                .__link-wrap {
+                    @include media-sp {
+                        width: 100%;
+                        .__logo {
+                            display: none;
+                        }
+                       
+                    }
+
+                    &:last-child {
+                        @include media-sp {
+                            margin-top: 16px;
+                            border-top: 1px solid #FAFAFA;
+                        }
+                    }
+
+                    a,
+                    p,
+                    li {
+                        color: #FAFAFA;
+                        font-size: 16px;
+                        font-weight: 500;
+                        text-decoration: none;
+                        display: block;
+                        padding-bottom: 16px;
+
+                        @include media-sp {
+                            font-weight: 500;
+
+                        }
+                    }
+
+                    p {
+                        line-height: 2.5;
+                    }
+
+                    .__logo {
+                        font-size: 20px;
+
+                        @include media-sp {
+                            padding-top: 32px;
+                            font-weight: 500;
+                            width: 100%;
+                        }
+
+                    }
+                }
+            }
+
+            .__copyright {
+                padding: 40px 32px;
+                text-align: center;
+                color: #FAFAFA;
+                border-top: 1px solid #FAFAFA;
+                font-size: 16px;
+                font-weight: 500;
+
+                @include media-sp {
+                    padding: 24px 0;
+                    font-size: 13px;
+                }
+
+            }
+
+            figure {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+
+                .footer_animate {
+
+                    width: 377px;
+                    height: 413px;
+                }
+            }
+
+        }
+    }
+}

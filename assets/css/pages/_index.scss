@@ -1,0 +1,762 @@
+.main {
+  overflow: hidden;
+}
+
+.sec-fv {
+  background: url(../img/fv-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  &-main {
+    overflow: hidden;
+    &-txt {
+      position: relative;
+      z-index: 5;
+      h2 {
+        font-weight: bold;
+        font-size: 36px;
+        font-family: "Inter", sans-serif;
+        color: var(--g-color-black);
+        line-height: 1.5;
+        @include pc {
+          font-size: 36rem;
+        }
+        @include sp {
+          font-size: 30rem;
+        }
+        span {
+          display: inline-block;
+        }
+        .orange {
+          color: var(--g-color-orange);
+        }
+      }
+    }
+    &-logo {
+      img {
+        width: 530px;
+        transform: translateX(-25px);
+        @include pc {
+          transform: translateX(-25rem);
+          width: 530rem;
+        }
+        @include sp {
+          transform: translateX(-6rem);
+          width: 260rem;
+        }
+      }
+    }
+  }
+  &-top-deco {
+    position: absolute;
+    right: 150px;
+    top: 0;
+    @include pc {
+      right: 150rem;
+    }
+    @include sp {
+      right: 50rem;
+    }
+    img {
+      width: 309px;
+      @include pc {
+        width: 309rem;
+      }
+      @include sp {
+        width: 150rem;
+      }
+    }
+  }
+  &-bottom-deco {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    @include sp {
+      right: -100rem;
+      opacity: 0.5;
+    }
+    img {
+      width: 500px;
+      @include pc {
+        width: 500rem;
+      }
+      @include sp {
+        width: 300rem;
+      }
+    }
+  }
+  .scroll-down {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 36px);
+    @include pc {
+      transform: translate(-50%, 36rem);
+    }
+    @include sp {
+      transform: translate(-50%, 25rem);
+    }
+    &__wrap {
+      position: relative;
+    }
+    &-line {
+      width: 1px;
+      height: 116px;
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all 0.3s ease-in-out;
+      @include pc {
+        bottom: 36rem;
+        height: 116rem;
+      }
+      @include sp {
+        bottom: 25rem;
+        height: 100rem;
+      }
+      span {
+        width: 1px;
+        height: 100%;
+        display: block;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 0;
+          bottom: 0;
+          left: 0;
+          background: #1e1e1e;
+          animation: scroll-down 2.5s linear infinite;
+        }
+      }
+    }
+    @keyframes scroll-down {
+      0% {
+        height: 0;
+        bottom: 100%;
+      }
+      50% {
+        height: 100%;
+        bottom: 0;
+      }
+      100% {
+        height: 0;
+        bottom: 0;
+      }
+    }
+    &-circle {
+      width: 72px;
+      height: 72px;
+      border: 1px solid #1e1e1e;
+      border-radius: 50%;
+      @include pc {
+        width: 72rem;
+        height: 72rem;
+      }
+      @include sp {
+        width: 50rem;
+        height: 50rem;
+      }
+    }
+  }
+}
+
+.sec-domain {
+  padding: 115px 0 200px;
+  @include pc {
+    padding: 115rem 0 200rem;
+  }
+  .sec-ttl {
+    margin-bottom: 124px;
+    @include pc {
+      margin-bottom: 124rem;
+    }
+  }
+  &-main {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    position: relative;
+    z-index: 5;
+    @include sp {
+      display: block;
+    }
+  }
+  &__elem {
+    width: 359px;
+    @include pc {
+      width: 359rem;
+    }
+    @include sp {
+      width: 100%;
+    }
+    &:nth-child(2) {
+      padding: 78px 0;
+      @include pc {
+        padding: 78rem 0;
+      }
+      @include sp {
+        padding: 0;
+      }
+    }
+    &:nth-child(3) {
+      padding-top: 156px;
+      @include pc {
+        padding-top: 156rem;
+      }
+      @include sp {
+        padding: 0;
+      }
+    }
+    &:not(:last-child) {
+      @include sp {
+        margin-bottom: 50rem;
+      }
+    }
+    &-img {
+      width: 100%;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 20px rgba($color: #000, $alpha: 0.25);
+      @include pc {
+        margin-bottom: 18rem;
+      }
+    }
+    &-txt {
+      p {
+        margin-bottom: 15px;
+        color: var(--g-color-black);
+        font-size: 20px;
+        font-family: "Inter", sans-serif;
+        font-weight: bold;
+        @include pc {
+          font-size: 20rem;
+          margin-bottom: 15rem;
+        }
+        @include sp {
+          font-size: 16rem;
+          margin-bottom: 10rem;
+        }
+      }
+      span {
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        color: var(--g-color-black);
+        @include pc {
+          font-size: 16rem;
+        }
+        @include sp {
+          font-size: 12rem;
+        }
+      }
+    }
+  }
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    &__wrap {
+      height: 100%;
+      position: relative;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &-deco {
+    position: absolute;
+    bottom: -5%;
+    right: 0;
+    z-index: 2;
+    img {
+      width: 100%;
+    }
+  }
+  .sec-domain-loop-wrap {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    padding: 30px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    @include pc {
+      padding: 30rem 0;
+    }
+  }
+  .sec-domain-loop-area {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    animation: loop-area 50s infinite linear;
+    &:not(:last-child) {
+      margin-right: 20px;
+      @include pc {
+        margin-right: 20rem;
+      }
+      @include sp {
+        margin-right: 12rem;
+      }
+    }
+  }
+  @keyframes loop-area {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .sec-domain-loop-txt {
+    font-size: 300px;
+    font-weight: bold;
+    color: #FFEAE2;
+    text-wrap: nowrap;
+    line-height: 1;
+    opacity: 0.4;
+    @include pc {
+      font-size: 180rem;
+    }
+    @include sp {
+      font-size: 72rem;
+    }
+    &:not(:last-child) {
+      margin-right: 20px;
+      @include pc {
+        margin-right: 20rem;
+      }
+      @include sp {
+        margin-right: 12rem;
+      }
+    }
+  }
+}
+
+.sec-about {
+  padding: 50px 0;
+  @include pc {
+    padding: 50rem 0;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+    @include sp {
+      display: block;
+    }
+  }
+  &-img {
+    max-width: 660px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    @include pc {
+      max-width: 660rem;
+    }
+    @include sp {
+      max-width: 100%;
+      margin-bottom: 50rem;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &-txt {
+    padding: 0 50px;
+    max-width: 450px;
+    @include pc {
+      max-width: 450rem;
+      padding: 0 50rem;
+    }
+    @include sp {
+      max-width: 100%;
+      padding: 0;
+    }
+    .sec-ttl {
+      margin-bottom: 50px;
+      @include pc {
+        margin-bottom: 50rem;
+      }
+      @include sp {
+        margin-bottom: 60rem;
+      }
+    }
+    &-main {
+      p {
+        color: var(--g-color-black);
+        font-size: 16px;
+        font-weight: 500;
+        font-family: "Inter", sans-serif;
+        margin-bottom: 34px;
+        @include pc {
+          margin-bottom: 34rem;
+          font-size: 16rem;
+        }
+        @include sp {
+          margin-bottom: 30rem;
+          font-size: 12rem;
+          padding-right: 50rem;
+        }
+        &.ttl {
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 20px;
+          @include pc {
+            font-size: 20rem;
+            margin-bottom: 20rem;
+          }
+          @include sp {
+            font-size: 16rem;
+            margin-bottom: 20rem;
+          }
+        }
+      }
+      .a-btn {
+        a {
+          margin-left: auto;
+        }
+      }
+    }
+    &-deco {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      img {
+        width: 60px;
+        @include pc {
+          width: 60rem;
+        }
+        @include sp {
+          width: 40rem;
+        }
+      }
+    }
+  }
+  &-bg {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 60%);
+    z-index: 1;
+    img {
+      width: 589px;
+      @include pc {
+        width: 589rem;
+      }
+      @include sp {
+        width: 200rem;
+      }
+    }
+  }
+}
+
+.sec-company {
+  padding: 50px 0;
+  @include pc {
+    padding: 50rem 0;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    @include sp {
+      flex-direction: column-reverse;
+    }
+  }
+  &-img {
+    max-width: 660px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    @include pc {
+      max-width: 660rem;
+    }
+    @include sp {
+      max-width: 100%;
+      margin-bottom: 50rem;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &-txt {
+    margin-right: 50px;
+    position: relative;
+    @include pc {
+      margin-right: 50rem;
+    }
+    .sec-ttl {
+      margin-bottom: 50px;
+      @include pc {
+        margin-bottom: 50rem;
+      }
+    }
+    &-main {
+      p {
+        color: var(--g-color-black);
+        font-size: 16px;
+        font-weight: 500;
+        font-family: "Inter", sans-serif;
+        margin-bottom: 34px;
+        padding-right: 50px;
+        @include pc {
+          padding-right: 50rem;
+        }
+        @include pc {
+          margin-bottom: 34rem;
+          font-size: 16rem;
+        }
+        &.ttl {
+          padding-right: 0;
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 20px;
+          @include pc {
+            font-size: 20rem;
+            margin-bottom: 20rem;
+          }
+        }
+      }
+      .a-btn {
+        a {
+          margin-left: auto;
+        }
+      }
+    }
+    &-deco {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(50%, -50%);
+      img {
+        width: 60px;
+        @include pc {
+          width: 60rem;
+        }
+      }
+    }
+  }
+}
+
+.sec-news {
+  padding: 180px 0 160px;
+  overflow: hidden;
+  @include pc {
+    padding: 180rem 0 160rem;
+  }
+  .container {
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    max-width: 1528px;
+    width: 100%;
+    margin: unset;
+    margin-left: auto;
+    left: 160px;
+    position: relative;
+    @include pc {
+      max-width: 1528rem;
+    }
+    @include sp {
+      display: block;
+      max-width: 90%;
+      margin: auto;
+
+    }
+    @include media-sp{
+      left: 1px;
+    }
+  }
+  &-txt {
+    max-width: 350px;
+    width: 100%;
+    margin-right: 200px;
+    @include pc {
+      margin-right: 200rem;
+      max-width: 350rem;
+    }
+    @include sp {
+      margin-right: 0;
+      max-width: 100%;
+    }
+    .sec-ttl {
+      margin-bottom: 50px;
+      @include pc {
+        margin-bottom: 50rem;
+      }
+    }
+    &-main {
+      p {
+        color: var(--g-color-black);
+        font-size: 16px;
+        font-weight: 500;
+        font-family: "Inter", sans-serif;
+        margin-bottom: 27px;
+        padding-right: 50px;
+        @include pc {
+          padding-right: 50rem;
+        }
+        @include sp {
+          margin-bottom: 27rem;
+          font-size: 16rem;
+          padding-right: 0;
+        }
+        &.ttl {
+          padding-right: 0;
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 20px;
+          @include pc {
+            font-size: 20rem;
+            margin-bottom: 20rem;
+          }
+        }
+      }
+      .a-btn {
+        a {
+          margin-left: auto;
+        }
+      }
+      .sec-news-control {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .slide-navi-btns {
+          display: flex;
+          align-items: center;
+          justify-content: left;
+          &__left {
+            margin-right: 10px;
+            @include pc {
+              margin-right: 10rem;
+            }
+          }
+          button {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1E1E1E;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            @include pc {
+              width: 44rem;
+              height: 44rem;
+            }
+            svg {
+              width: 9px;
+              height: 17px;
+              @include pc {
+                width: 9rem;
+                height: 17rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sec-news-items {
+    width: 70%;
+    overflow: hidden;
+    @include sp {
+      width: 100%;
+      margin-top: 50rem;
+    }
+    .sec-news-bg {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      left: 60%;
+      img {
+        width: 770px;
+        @include pc {
+          width: 770rem;
+        }
+        @include sp {
+          width: 100%;
+        }
+      }
+    }
+    .sec-news-deco {
+      position: absolute;
+      bottom: -175px;
+      left: -160px;
+      img {
+        width: 150px;
+        @include pc {
+          width: 150rem;
+        }
+        @include sp {
+          width: 100rem;
+        }
+      }
+    }
+    .swiper-button-list {
+      opacity: 0;
+      visibility: hidden;
+      display: none;
+    }
+    .news-item {
+      width: 420px;
+      @include pc {
+        width: 420rem;
+      }
+      @include sp {
+        width: 250rem;
+      }
+      &:not(:last-child) {
+        margin-right: 40px;
+        @include pc {
+          margin-right: 40rem;
+        }
+        @include sp {
+          margin-right: 20rem;
+        }
+      }
+      &-img {
+        width: 100%;
+        margin-bottom: 27px;
+        @include pc {
+          margin-bottom: 27rem;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      &-ttl {
+        p {
+          font-size: 20px;
+          font-weight: bold;
+          font-family: "Inter", sans-serif;
+          color: var(--g-color-black);
+          @include pc {
+            font-size: 20rem;
+          }
+        }
+      }
+    }
+  }
+}

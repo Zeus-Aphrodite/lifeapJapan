@@ -1,0 +1,44 @@
+/**
+* @file _common.scss
+**/
+
+.is-pc {
+    display: block;
+    @include media-sp {
+        display: none!important;
+    }
+}
+
+.is-sp {
+    display: none!important;
+    @include media-sp {
+        display: block!important;
+    }
+}
+
+
+.no-display {
+    top: 0!important;
+    opacity: 0;
+}
+
+.__container {
+    max-width: 1120px;
+    width: 100%;
+}
+
+// .slick-slide {
+//     margin-left: 32px;
+// }
+
+// .slick-slide {
+//     max-width: 325px;
+//     width: 100%;
+// }
+
+.slick-list {
+    transform: scale(1.1)!important;
+    @include media-sp {
+        transform: scale(1.5)!important;
+    }
+}

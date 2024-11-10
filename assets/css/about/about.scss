@@ -1,0 +1,606 @@
+#about {
+    padding-top: 85px;
+
+    .p-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 16px;
+        padding-left: 16px;
+        background-color: #ededed;
+
+        .__container {
+            max-width: 1122px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 8.5px;
+            padding-bottom: 8.5px;
+            background-color: #ededed;
+            gap: 16px;
+
+
+            a {
+                font-size: 13px;
+                font-weight: 500;
+                color: #333333;
+                text-decoration: none;
+            }
+
+
+        }
+    }
+
+    .p-pagettl {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 160px;
+        background-position: center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        position: relative;
+        overflow: hidden;
+
+        @include media-sp {
+            background-size: cover;
+            padding-left: 10%;
+
+        }
+
+        .__container {
+            position: relative;
+            ;
+            max-width: 1440px;
+            padding-top: 104px;
+            padding-bottom: 88px;
+
+            &:before {
+                position: absolute;
+                content: '';
+                width: 454px;
+                height: 479px;
+                left: -290px;
+                bottom: -220px;
+                background-image: url('../img/fv/center_mark.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+
+            @include media-sp {
+                padding-top: 104px;
+            }
+
+            .en-ttl {
+                color: rgba(233, 81, 78, 0.6);
+                font-size: 25px;
+                font-weight: 700;
+
+                @include media-sp {
+                    font-size: 20px;
+                }
+            }
+
+            .jp-ttl {
+                color: #333333;
+                font-weight: 700;
+                font-size: 42px;
+
+                @include media-sp {
+                    font-size: 48px;
+                }
+            }
+
+            .company_header_smallcircle {
+                position: absolute;
+                width: 30px;
+                left: 310px;
+                top: 190px;
+            }
+
+            .company_header_bigcircle {
+                position: absolute;
+                width: 20px;
+                left: 300px;
+                top: 200px;
+                animation: animatecircle 2s linear infinite;
+            }
+
+            @keyframes animatecircle {
+                0% {
+                    scale: 1;
+                }
+
+                50% {
+                    scale: 1.5;
+                }
+
+                100% {
+                    scale: 1;
+                }
+
+            }
+
+            .aboutfv_image {
+                position: absolute;
+                width: 351px;
+                height: 398px;
+                right: 0;
+                bottom: 16.7px;
+
+                @include media-sp {
+                    opacity: 0.1 !important;
+                }
+            }
+
+            .aboutfv_image_circle {
+                position: absolute;
+                right: 280px;
+                top: 20px;
+                width: 20px;
+                animation: circleanimate 2s linear infinite;
+
+                @include media-sp {
+                    opacity: 0.1 !important;
+                }
+
+            }
+
+            @keyframes circleanimate {
+                0% {
+                    scale: 1;
+                }
+
+                50% {
+                    scale: 1.4;
+                }
+
+                100% {
+                    scale: 1;
+                }
+
+            }
+
+        }
+    }
+
+    .p-main-container {
+        max-width: 1440px;
+        position: relative;
+        margin: auto;
+        margin-top: 59px;
+
+        @include media-sp {
+            max-width: 1024px;
+            position: relative;
+            margin: 0;
+        }
+
+        .p-ourvision {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-right: 16px;
+            padding-left: 16px;
+            background-image: url("../img/contact/Group 376.png");
+            background-position: left;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+            height: 1216.4px;
+            margin: auto;
+
+            @include media-sp {
+                background-size: cover;
+                width: 100%;
+            }
+
+            .__container {
+                padding-bottom: 116px;
+
+                @include media-sp {
+                    padding-top: 104px;
+                    padding-bottom: 104px;
+
+                }
+
+                .__vision-item-text {
+                    margin-top: 137px;
+                    position: relative;
+
+                    @include media-sp {
+                        margin-top: 50px;
+                    }
+
+                    .message_title {
+                        font-size: 64px;
+                        font-family: Noto Sans JP;
+                        line-height: 77.45px;
+                        font-weight: 200;
+                        color: #F76934;
+                    }
+
+                    .message_text {
+                        font-size: 24px;
+                        font-family: Noto Sans JP;
+                        color: #000;
+                        line-height: 34.75px;
+                        font-weight: 700;
+
+                    }
+                }
+
+                .__vision-item {
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 24px;
+                    padding-top: 86px;
+                    padding-bottom: 22px;
+                    width: 100%;
+                    border-bottom: 1px solid #263238;
+
+                    @include media-sp {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding-top: 32px;
+                        gap: 16px;
+                    }
+
+                    .__vision-item-ttl {
+                        color: #333333;
+                        font-weight: bold;
+                        font-size: 49px;
+                        min-width: 194px;
+                        font-family: Noto Sans JP;
+                        letter-spacing: 4%;
+
+                        @include media-sp {
+                            font-size: 33px;
+
+
+                        }
+                    }
+
+                    .__vision-item-ctn {
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: #333333;
+                        font-family: noto sans jp;
+                        line-height: 150%;
+                        letter-spacing: 4%;
+
+                        @include media-sp {
+                            font-size: 15px;
+                        }
+                    }
+                }
+
+                .__vision-item:nth-child(2) {
+                    padding-top: 53px;
+                    padding-bottom: 22px;
+                }
+
+                .__vision-item:nth-child(3) {
+                    padding-top: 59px;
+                    padding-bottom: 22px;
+                }
+            }
+
+        }
+    }
+
+
+    .p-message {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(../img/contact/bg-ceo.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        margin-top: -400px;
+
+        @include media-sp {
+            margin-top: -200px;
+        }
+
+        figure {
+            position: absolute;
+            right: 0;
+            z-index: -1;
+        }
+
+        .__container {
+            padding-bottom: -41px;
+            display: flex;
+            align-items: flex-start;
+            gap: 60px;
+            max-width: 1440px;
+            padding: 0 16px;
+
+            @include media-pc {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding-bottom: 0;
+            }
+
+            .__ctn-img {
+                transform: translateY(-161px);
+                background-image: url('../img/contact/img-seo.jpg');
+                color: #000;
+                width: 448px;
+                height: 491px;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+
+                @include media-pc {
+                    transform: translateY(0px);
+                }
+
+                @include media-sp {
+                    display: none;
+                }
+
+                &::before {
+                    content: "前田さんのお写真";
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    font-style: Noto Sans JP;
+                    font-size: 20px;
+                    font-weight: 500;
+                    /* line-height: 56.47px; */
+                }
+
+                @include media-sp {
+                    transform: unset;
+                }
+            }
+
+            .__message-ctn {
+                padding-left: 134px;
+
+                @include media-sp {
+                    padding-left: 16px;
+
+                }
+
+                figure {
+                    @include media-sp {
+                        .about_right {
+                            display: none;
+                        }
+                    }
+                }
+
+                .__ctn-ttl {
+                    padding-top: 88px;
+                    font-size: 25px;
+                    font-weight: 700;
+                    color: #fafafa;
+                    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1450980392);
+
+                    @include media-sp {
+                        font-size: 23px;
+                        padding-bottom: 72px;
+
+                    }
+                }
+
+                .__ctn-desc {
+                    width: 610px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: #fafafa;
+                    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3137254902);
+                    padding-top: 32px;
+                    padding-bottom: 181px;
+
+                    @include media-pc {
+                        width: 100%;
+                        padding-bottom: 72px;
+                    }
+
+                    @include media-sp {
+                        font-size: 15px;
+                        font-weight: 500;
+                    }
+                }
+
+                .socialbtn {
+                    background-image: url("../img/contact/social_twi.png");
+                    position: absolute;
+                    width: 58px;
+                    height: 78px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    left: 50%;
+                    bottom: 10%;
+                    transform: translate(-50%, -10%);
+
+                    @include media-pc {
+                        left: 100%;
+                    }
+
+                    @include media-sp {
+                        left: 90%;
+                        bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .company_media {
+        .company_media_container {
+            max-width: 1113px;
+            margin: auto;
+
+            .company_media_header {
+                position: relative;
+                margin-top: 185px;
+                width: 316px;
+                height: 77px;
+                margin-bottom: 80.6px;
+                margin-left: 38%;
+
+                @include media-pc {
+                    margin-left: 10%;
+                }
+
+                .company_media_title {
+                    text-align: center;
+                    font-size: 64px;
+                    font-family: Noto Sans JP;
+                    line-height: 77.45px;
+                    font-weight: 200;
+                    color: #F76934;
+                }
+
+                .company_media_text {
+                    font-size: 24px;
+                    font-family: Noto Sans JP;
+                    color: #000;
+                    line-height: 34.75px;
+                    font-weight: 700;
+
+                }
+
+                .company_media_header_smallcircle {
+                    position: absolute;
+                    left: 305px;
+                    top: 60.45px;
+                    width: 30px;
+                }
+
+                .company_media_header_bigcircle {
+                    position: absolute;
+                    left: 305px;
+                    top: 74.45px;
+                    width: 15px;
+                    animation: widthani 3s linear infinite;
+                }
+
+                @keyframes widthani {
+                    0% {
+                        scale: 1;
+                    }
+
+                    50% {
+                        scale: 1.5;
+                    }
+
+                    100% {
+                        scale: 1;
+                    }
+                }
+            }
+
+            .media {
+                width: 100%;
+                height: 497px;
+                background-image: url("https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6482.89343534308!2d139.743567!3d35.666001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b905c955555%3A0x881b18c2c3edbe12!2z6JmO44OO6ZaA44K_44Ov44O844K644Kq44OV44Kj44K5!5e0!3m2!1sja!2sjp!4v1724780442747!5m2!1sja!2sjp");
+                margin-bottom: 60px;
+                iframe{
+                    width: 100%;
+                }
+                @include media-pc {
+                    width: 90%;
+                    margin: auto;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+    }
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .paginationjs-pages {
+        ul {
+            display: flex;
+            gap: 24px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .paginationjs-page,
+        .paginationjs-prev,
+        .paginationjs-next,
+        .paginationjs-ellipsis {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            color: #555;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                border-color: #7d4aea; // Purple border color
+            }
+        }
+
+        li.active {
+            a {
+                height: 30px;
+                line-height: 30px;
+                background: #000;
+                color: #fff;
+                border-radius: 50%;
+            }
+
+        }
+        li{
+            &:first-child{
+                margin-right: 40px;
+            }
+            &:last-child{
+                margin-left: 40px;
+            }
+        }
+        li{
+            a {
+                height: 30px;
+                line-height: 30px;
+                border-radius: 50%;
+            }
+
+        }
+        .paginationjs-page.active {
+            border-radius: 50%;
+            background-color: #000;
+            color: #fff;
+            border-color: #333;
+            border-radius: 50%;
+        }
+
+        .paginationjs-prev,
+        .paginationjs-next {
+            font-size: 24px;
+            color: #7d4aea; // Purple arrow color
+            border-color: #7d4aea;
+        }
+
+        .paginationjs-ellipsis {
+            cursor: default;
+            border: none;
+        }
+
+    }
+}
