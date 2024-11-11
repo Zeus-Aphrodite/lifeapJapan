@@ -317,7 +317,7 @@ figure {
 }
 .c-header .c-header__inner .c-header-right .c-header__items li .submenu li a {
   text-align: center;
-  color: #E9514E;
+  color: #333333;
   font-size: 16px;
 }
 .c-header .c-header__inner .c-header-right .c-header__items li .submenu li:nth-child(3) {
