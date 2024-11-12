@@ -9,78 +9,93 @@
     background-color: #FAFAFA;
     z-index: 9999;
     top: 0;
+
     @include media-sp {
         padding: 24px 16px;
     }
+
     .c-header__inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
+
         h1 {
             width: 219px;
             height: auto;
-            a{
+
+            a {
                 display: block;
             }
+
             img {
                 width: 219px;
                 height: 62px;
             }
         }
+
         .c-header-right {
             display: flex;
             align-items: center;
             justify-content: center;
+
             .c-header__items {
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
                 gap: 33px;
+
                 @include responsive(1280px) {
                     gap: 15px;
                 }
+
                 @include responsive(1180px) {
                     display: none;
                 }
+
                 li {
                     font-weight: 700;
                     font-size: 16px;
                     position: relative;
                     padding: 10px 0;
-                    
+
                     &::after {
                         content: '';
                         position: absolute;
                         bottom: 0;
-                        left: 50%;  
-                        width: 0%; 
-                        height: 1.5px;  
-                        background-color: #333333; 
-                        transition: all 0.1s ease-out;  
+                        left: 50%;
+                        width: 0%;
+                        height: 1.5px;
+                        background-color: #333333;
+                        transition: all 0.1s ease-out;
                     }
+
                     &:hover::after {
-                        width: 100%;  
-                        left: 0;   
+                        width: 100%;
+                        left: 0;
                     }
+
                     a {
                         text-decoration: none;
 
                     }
+
                     &:nth-child(3) {
                         padding-right: 20px;
+
                         &:hover {
                             transition: all 0.3s;
                         }
+
                         &:hover::before {
-                            
-                            content: '';  
-                            display: block;  
-                            transform-origin: center;  
+
+                            content: '';
+                            display: block;
+                            transform-origin: center;
                             transform: rotate(-180deg) translateY(-10px);
                         }
                     }
-                    
+
                     &:nth-child(3)::before {
                         content: '';
                         background-image: url(../img/header/ico-down.png);
@@ -101,11 +116,14 @@
                             left: auto;
                         }
                     }
+
                     .submenu {
                         opacity: 0;
                         visibility: hidden;
-                        max-height: 0; /* 初期状態で高さを0にする */
-                        overflow: hidden; /* 中の要素が見えないようにする */
+                        max-height: 0;
+                        /* 初期状態で高さを0にする */
+                        overflow: hidden;
+                        /* 中の要素が見えないようにする */
                         position: absolute;
                         left: 0;
                         top: 61px;
@@ -113,9 +131,11 @@
                         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
                         z-index: 1000;
                         width: max-content;
-                        transition: opacity 0.6s ease, visibility 0.3s ease, max-height 1s ease; /* max-heightをアニメーションさせる */
+                        transition: opacity 0.6s ease, visibility 0.3s ease, max-height 1s ease;
+                        /* max-heightをアニメーションさせる */
                         padding: 0;
                         background-color: unset;
+
                         li {
                             text-align: center;
                             width: 226px;
@@ -125,28 +145,34 @@
                             height: 58px;
                             margin-top: 2px;
                             background-color: #FAFAFA;
+
                             &:hover {
                                 background-color: #E5E6E9;
                             }
+
                             a {
                                 text-align: center;
                                 color: #333333;
                                 font-size: 16px;
 
                             }
+
                             &:nth-child(3) {
                                 padding-right: 0;
+
                                 &:hover {
                                     transition: all 0.3s;
-                                    
+
                                 }
+
                                 &:hover::before {
-                                    
-                                    content: '';  
-                                    display: none;  
-                                    transform-origin: center;  
+
+                                    content: '';
+                                    display: none;
+                                    transform-origin: center;
                                     transform: rotate(-180deg) translateY(-10px);
                                 }
+
                                 &:nth-child(3)::before {
                                     content: '';
                                     background-image: url(../img/header/ico-down.png);
@@ -162,40 +188,44 @@
                                     display: none;
                                 }
                             }
+
                             &::after {
                                 content: '';
                                 position: absolute;
                                 bottom: 0;
-                                left: 50%;  
-                                width: 0%; 
-                                height: 1.5px;  
-                                background-color: #E9514E; 
-                                transition: all 0.1s ease-out;  
+                                left: 50%;
+                                width: 0%;
+                                height: 1.5px;
+                                background-color: #E9514E;
+                                transition: all 0.1s ease-out;
                             }
-                            
+
                         }
                     }
 
                     &:hover .submenu {
                         opacity: 1;
                         visibility: visible;
-                        max-height: 500px; /* 必要な高さに変更（調整可能） */
+                        max-height: 500px;
+                        /* 必要な高さに変更（調整可能） */
                     }
 
-                    a{
+                    a {
                         display: block;
                         text-decoration: none;
                     }
-                    
+
                     img {
                         width: 32px;
                     }
                 }
             }
-            
+
         }
+
         .hambtn {
             display: none;
+
             @include responsive(1179px) {
                 display: block;
             }
@@ -208,26 +238,33 @@
             cursor: pointer;
             transition: 0.2s;
             opacity: 1;
+
             .hamburger-menu-line.top {
                 top: 0;
             }
+
             .hamburger-menu-line.middle {
                 top: 50%;
                 transform: translateY(-50%);
             }
+
             .hamburger-menu-line.bottom {
                 bottom: 0;
             }
+
             .hamburger-menu-line.top.open {
                 transform: translateY(2px) rotate(-45deg);
             }
+
             .hamburger-menu-line.middle.open {
                 opacity: 0;
                 visibility: visible;
             }
+
             .hamburger-menu-line.bottom.open {
                 transform: translateY(-12px) rotate(45deg);
             }
+
             .hamburger-menu-line {
                 position: absolute;
                 width: 100%;
@@ -235,7 +272,7 @@
                 background-color: #333333;
                 transition: transform .3s, opacity .1s;
             }
-        } 
+        }
     }
 
 
@@ -251,20 +288,25 @@
     top: -600px;
     opacity: 1;
     height: max-content;
+
     .hambuger-menu-head {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         figure {
             width: 250px;
             height: auto;
+
             a {
                 display: block;
+
                 img {
                     width: 100%;
                 }
             }
         }
+
         svg {
             cursor: pointer;
         }
@@ -275,6 +317,7 @@
             padding-top: 30px;
             position: relative;
             width: max-content;
+
             a {
                 font-size: 16px;
                 font-weight: 700;
@@ -286,54 +329,50 @@
                 content: '';
                 position: absolute;
                 bottom: 0;
-                left: 50%;  
-                width: 0%; 
-                height: 2.5px;  
-                background-color: #333333; 
-                transition: all 0.2s ease-out;  
+                left: 50%;
+                width: 0%;
+                height: 2.5px;
+                background-color: #333333;
+                transition: all 0.2s ease-out;
             }
+
+            &:nth-child(3) {
+                &:hover::after {
+                width: 0;
+                left: 0;
+            }
+            .submenu {
+                li {
+                    &:nth-child(3) {
+                        &:hover::after {
+                        width: 100%;
+                        left: 0;
+                        }
+                    }
+                }
+            }
+            
+            }
+
             &:hover::after {
-                width: 100%;  
-                left: 0;   
+                width: 100%;
+                left: 0;
             }
             a {
                 text-decoration: none;
 
             }
-            &:nth-child(3) {
-                padding-right: 20px;
-                &:hover {
-                    transition: all 0.3s;
-                }
-                &:hover::before {
-                    
-                    content: '';  
-                    display: block;  
-                    transform-origin: center;  
-                    transform: rotate(-180deg) translateY(-10px);
-                }
-            }
-            
-            &:nth-child(3)::before {
-                content: '';
-                background-image: url(../img/header/ico-down.png);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: 100% 100%;
-                position: absolute;
-                width: 14px;
-                height: 8px;
-                right: 0;
-                transform: translateY(10px);
-                transition: 0.2s;
-            }
-            
-            
             img {
                 width: 32px;
                 margin-left: 16px;
             }
         }
+        .hoverUnderline {
+            .submenu {
+               margin-top: 10px;
+               margin-left: 10px;
+            }
+           
+        }
     }
 }
-
