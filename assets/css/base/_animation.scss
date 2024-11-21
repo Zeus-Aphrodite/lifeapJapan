@@ -62,6 +62,8 @@
       visibility: visible; // 表示された際に可視化
       filter: blur(0);
       opacity: 1;
+      display: flex;
+      align-items: baseline;
 
       &:nth-of-type(1) {
         transition-delay: 0s;
@@ -130,14 +132,25 @@
   height: 11.85px;
   animation: animatepoint 2s linear infinite;
 }
+
 @keyframes animatepoint {
-  0% { scale: 1;}
-  50% { scale: 1.7;}
-  100% { scale: 1;}
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.7;
+  }
+
+  100% {
+    scale: 1;
+  }
 }
-.sec-fv-bottom-deco{
+
+.sec-fv-bottom-deco {
   position: relative;
 }
+
 .smallstarpoint {
   position: absolute;
   left: 80px;
@@ -146,11 +159,21 @@
   height: 20px;
   animation: animatestarpoint 2s linear infinite;
 }
+
 @keyframes animatestarpoint {
-  0% { scale: 1;}
-  50% { scale: 1.5;}
-  100% { scale: 1;}
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.5;
+  }
+
+  100% {
+    scale: 1;
+  }
 }
+
 .bigstarpoint {
   position: absolute;
   left: 30px;
@@ -159,11 +182,21 @@
   height: 30px;
   animation: animatestarpoint 2s linear infinite;
 }
+
 @keyframes animatestarpoint {
-  0% { scale: 1;}
-  50% { scale: 1.7;}
-  100% { scale: 1;}
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.7;
+  }
+
+  100% {
+    scale: 1;
+  }
 }
+
 .bigpoint {
   position: absolute;
   right: 170px;
@@ -172,11 +205,21 @@
   height: 25px;
   animation: animatecirclepoint 2s linear infinite;
 }
+
 @keyframes animatecirclepoint {
-  0% { scale: 1.1;}
-  50% { scale: 1.7;}
-  100% { scale: 1.1;}
+  0% {
+    scale: 1.1;
+  }
+
+  50% {
+    scale: 1.7;
+  }
+
+  100% {
+    scale: 1.1;
+  }
 }
+
 .sec-fv-main-txt {
   ._fadeup {
     transform: translateY(36px);
