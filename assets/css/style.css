@@ -3306,6 +3306,8 @@ html {
   visibility: visible;
   filter: blur(0);
   opacity: 1;
+  display: flex;
+  align-items: baseline;
 }
 .js-io._delay._show:nth-of-type(1) {
   transition-delay: 0s;
